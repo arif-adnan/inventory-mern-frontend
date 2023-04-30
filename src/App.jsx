@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-// import {getToken} from "./helpers/SessionHelper";
+import {getToken} from "./helpers/SessionHelper";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import Page404 from "./pages/NotFound/Page404";
@@ -36,56 +36,56 @@ import SupplierListPage from "./pages/Supplier/SupplierListPage";
 import ExpenseTypeList from "./components/ExpenseType/ExpenseTypeList";
 import ExpenseTypeListPage from "./pages/ExpenseType/ExpenseTypeListPage";
 const App = () => {
-    // if(getToken()){
-    //     return (
-    //         <Fragment>
-    //             <BrowserRouter>
-    //                 <Routes>
-    //                     <Route exact path="/BrandCreateUpdatePage" element={<BrandCreateUpdatePage />}/>}/>
-    //                     <Route exact path="/BrandListPage" element={<BrandListPage />}/>}/>
-    //
-    //                     <Route exact path="/CategoryCreateUpdatePage" element={<CategoryCreateUpdatePage />}/>}/>
-    //                     <Route exact path="/CategoryListPage" element={<CategoryListPage />}/>}/>
-    //
-    //                     <Route exact path="/CustomerCreateUpdatePage" element={<CustomerCreateUpdatePage />}/>}/>
-    //                     <Route exact path="/CustomerListPage" element={<CustomerListPage />}/>}/>
-    //
-    //                     <Route exact path="/ExpenseTypeCreateUpdatePage" element={<ExpenseTypeCreateUpdatePage />}/>}/>
-    //                     <Route exact path="/ExpenseTypeListPage" element={<ExpenseTypeListPage />}/>}/>
-    //
-    //                     <Route exact path="/ExpenseCreateUpdatePage" element={<ExpenseCreateUpdatePage />}/>}/>
-    //                     <Route exact path="/ExpenseListPage" element={<ExpenseListPage />}/>}/>
-    //
-    //                     <Route exact path="/ProductCreateUpdatePage" element={<ProductCreateUpdatePage />}/>}/>
-    //                     <Route exact path="/ProductListPage" element={<ProductListPage />}/>}/>
-    //
-    //                     <Route exact path="/PurchaseCreateUpdatePage" element={<PurchaseCreateUpdatePage />}/>}/>
-    //                     <Route exact path="/PurchaseListPage" element={<PurchaseListPage />}/>}/>
-    //
-    //                     <Route exact path="/ReturnCreateUpdatePage" element={<ReturnCreateUpdatePage />}/>}/>
-    //                     <Route exact path="/ReturnListPage" element={<ReturnListPage />}/>}/>
-    //
-    //                     <Route exact path="/SalesCreateUpdatePage" element={<SalesCreateUpdatePage />}/>}/>
-    //                     <Route exact path="/SalesListPage" element={<SalesListPage />}/>}/>
-    //
-    //                     <Route exact path="/SupplierCreateUpdatePage" element={<SupplierCreateUpdatePage />}/>}/>
-    //                     <Route exact path="/SupplierListPage" element={<SupplierListPage />}/>}/>
-    //
-    //                     <Route exact path="/PurchaseReportPage" element={<PurchaseReportPage />}/>}/>
-    //                     <Route exact path="/ReturnReportPage" element={<ReturnReportPage />}/>}/>
-    //                     <Route exact path="/SaleReportPage" element={<SaleReportPage />}/>}/>
-    //                     <Route exact path="/ExpenseReportPage" element={<ExpenseReportPage />}/>}/>
-    //
-    //                     <Route exact path="/" element={<DashboardPage />}/>}/>
-    //                     <Route exact path="/Profile" element={<ProfilePage/>}/>} />}/>
-    //                     <Route path="*" element={<Page404/>}/>
-    //                 </Routes>
-    //             </BrowserRouter>
-    //             <FullscreenLoader/>
-    //         </Fragment>
-    //     );
-    // }
-    // else {
+    if(getToken()){
+        return (
+            <Fragment>
+                <BrowserRouter>
+                    <Routes>
+                        <Route exact path="/BrandCreateUpdatePage" element={<BrandCreateUpdatePage />}/>}/>
+                        <Route exact path="/BrandListPage" element={<BrandListPage />}/>}/>
+
+                        <Route exact path="/CategoryCreateUpdatePage" element={<CategoryCreateUpdatePage />}/>}/>
+                        <Route exact path="/CategoryListPage" element={<CategoryListPage />}/>}/>
+
+                        <Route exact path="/CustomerCreateUpdatePage" element={<CustomerCreateUpdatePage />}/>}/>
+                        <Route exact path="/CustomerListPage" element={<CustomerListPage />}/>}/>
+
+                        <Route exact path="/ExpenseTypeCreateUpdatePage" element={<ExpenseTypeCreateUpdatePage />}/>}/>
+                        <Route exact path="/ExpenseTypeListPage" element={<ExpenseTypeListPage />}/>}/>
+
+                        <Route exact path="/ExpenseCreateUpdatePage" element={<ExpenseCreateUpdatePage />}/>}/>
+                        <Route exact path="/ExpenseListPage" element={<ExpenseListPage />}/>}/>
+
+                        <Route exact path="/ProductCreateUpdatePage" element={<ProductCreateUpdatePage />}/>}/>
+                        <Route exact path="/ProductListPage" element={<ProductListPage />}/>}/>
+
+                        <Route exact path="/PurchaseCreateUpdatePage" element={<PurchaseCreateUpdatePage />}/>}/>
+                        <Route exact path="/PurchaseListPage" element={<PurchaseListPage />}/>}/>
+
+                        <Route exact path="/ReturnCreateUpdatePage" element={<ReturnCreateUpdatePage />}/>}/>
+                        <Route exact path="/ReturnListPage" element={<ReturnListPage />}/>}/>
+
+                        <Route exact path="/SalesCreateUpdatePage" element={<SalesCreateUpdatePage />}/>}/>
+                        <Route exact path="/SalesListPage" element={<SalesListPage />}/>}/>
+
+                        <Route exact path="/SupplierCreateUpdatePage" element={<SupplierCreateUpdatePage />}/>}/>
+                        <Route exact path="/SupplierListPage" element={<SupplierListPage />}/>}/>
+
+                        <Route exact path="/PurchaseReportPage" element={<PurchaseReportPage />}/>}/>
+                        <Route exact path="/ReturnReportPage" element={<ReturnReportPage />}/>}/>
+                        <Route exact path="/SaleReportPage" element={<SaleReportPage />}/>}/>
+                        <Route exact path="/ExpenseReportPage" element={<ExpenseReportPage />}/>}/>
+
+                        <Route exact path="/" element={<DashboardPage />}/>}/>
+                        <Route exact path="/Profile" element={<ProfilePage/>}/>} />}/>
+                        <Route path="*" element={<Page404/>}/>
+                    </Routes>
+                </BrowserRouter>
+                <FullscreenLoader/>
+            </Fragment>
+        );
+    }
+    else {
         return (
             <Fragment>
                 <BrowserRouter>
@@ -102,6 +102,6 @@ const App = () => {
                 <FullscreenLoader/>
             </Fragment>
         );
-    // }
+    }
 };
 export default App;
