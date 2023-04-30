@@ -1,10 +1,27 @@
 import React, {Fragment, useRef} from 'react';
 import {useNavigate} from "react-router-dom";
+import {ErrorToast, IsEmail} from "../../helper/FormHelper";
+import {RecoverVerifyEmailRequest} from "../../APIRequest/UsersAPIRequest";
 
 const SendOTP = () => {
 
     let emailRef=useRef();
     let navigate=useNavigate();
+
+    const VerifyEmail = async () => {
+        let email = emailRef.value;
+        if (IsEmail(email)) {
+            ErrorToast("Valid Email Address Required !")
+        }
+        else {
+            let result = await RecoverVerifyEmailRequest(email);
+            if(result === true){
+                navigate("/VerifyOTP");
+            }
+        }
+    }
+
+
 
     return (
         <Fragment>
@@ -18,7 +35,7 @@ const SendOTP = () => {
                                 <label>Your email address</label>
                                 <input ref={(input)=>emailRef=input}  placeholder="User Email" className="form-control" type="email"/>
                                 <br/>
-                                <button  className="btn w-100 btn-success">Next</button>
+                                <button onClick={VerifyEmail} className="btn w-100 btn-success">Next</button>
                             </div>
                         </div>
                     </div>
