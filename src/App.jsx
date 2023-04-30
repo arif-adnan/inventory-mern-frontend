@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-import {getToken} from "./helpers/SessionHelper";
+import {getToken} from "./helper/SessionHelper";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import Page404 from "./pages/NotFound/Page404";
@@ -33,7 +33,7 @@ import SalesCreateUpdatePage from "./pages/Sales/SalesCreateUpdatePage";
 import SalesListPage from "./pages/Sales/SalesListPage";
 import SupplierCreateUpdatePage from "./pages/Supplier/SupplierCreateUpdatePage";
 import SupplierListPage from "./pages/Supplier/SupplierListPage";
-import ExpenseTypeList from "./components/ExpenseType/ExpenseTypeList";
+// import ExpenseTypeList from "./components/ExpenseType/ExpenseTypeList";
 import ExpenseTypeListPage from "./pages/ExpenseType/ExpenseTypeListPage";
 const App = () => {
     if(getToken()){
