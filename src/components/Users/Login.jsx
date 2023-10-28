@@ -1,7 +1,7 @@
-import React, {Fragment, useRef} from 'react';
-import {Link} from "react-router-dom";
-import {ErrorToast, IsEmail, IsEmpty} from "../../helper/FormHelper";
-import {LoginRequest} from "../../APIRequest/UsersAPIRequest";
+import React, { Fragment, useRef } from 'react';
+import { Link } from "react-router-dom";
+import { LoginRequest } from "../../APIRequest/UsersAPIRequest";
+import { ErrorToast, IsEmail, IsEmpty } from "../../helper/FormHelper";
 
 const Login = () => {
     let emailRef, passRef = useRef();
@@ -33,9 +33,9 @@ const Login = () => {
                             <div className="card-body">
                                 <h3>SIGN IN</h3>
                                 <br/>
-                                <input ref={(input)=>emailRef=input} placeholder="User Email" className="form-control" type="email"/>
+                                <input ref={(input)=>emailRef=input} value="arif751803@gmail.com" placeholder="User Email" className="form-control" type="email"/>
                                 <br/>
-                                <input ref={(input)=>passRef=input} placeholder="User Password" className="form-control" type="password"/>
+                                <input ref={(input)=>passRef=input} value="123456" placeholder="User Password" className="form-control" type="password"/>
                                 <br/>
                                 <button onClick={SubmitLogin} className="btn btn-success w-100 animated ">Next</button>
                                 <div className="float-end mt-3">
